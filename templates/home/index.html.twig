@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    {% for product in products %}
+        <article>
+            <header>{{ product.attributes.title }}</header>
+            <img src="http://localhost:1337{{ product.attributes.image.data.attributes.formats.small.url }}" alt="">
+            <footer>{{ product.attributes.price }}€</footer>
+        </article>
+    {% endfor %}
+</div>
+{% endblock %}
